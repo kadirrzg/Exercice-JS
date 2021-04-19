@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/ico" href="../assets/images/ico2.ico" />
+
+    <title>EXERCICE 1</title>
+  </head>
+  <body>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+    
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="exercice 1.html" class="nav-link px-2 link-secondary">Exercice 1</a></li>
+          <li><a href="exercice 2.html" class="nav-link px-2 link-dark">Exercice 2</a></li>
+          <li><a href="exercice 3.html" class="nav-link px-2 link-dark">Exercice 3</a></li>
+          <li><a href="exercice 4.html" class="nav-link px-2 link-dark">Exercice 4</a></li>
+        </ul>
+        <div class="col-md-3 text-end">
+        </div>
+      </header>
+      <img src="../../../STATIQUE/ASSETS/svg/banner.svg" class="img-fluid" alt="Responsive image">
+      <section class="page-section accueil" id="accueil">
+        <br>
+        <div class="container">
+            <!-- Titre de la page-->
+            <br>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">EXERCICE 1</h2>
+            <hr class="my-4">
+                        <!-- debut exercice -->
+              <div id="exo1" class="container">
+                  <p id="monjs">Regarder la console pour le resultat.</p>
+                  <h3>Code sources :</h3>
+  <pre>
+  var jeune = []; //creer tableau des jeunes
+  var moyen = []; //creer tableau des moyens
+  var vieux = []; //creer tableau des vieux
+  while (true) {
+      var age = prompt('Veuillez indiquer l\'age de la personne : \n\n + de 100 s\'arrete');
+      if ((age <= 100) && (age > 40)) { // age entre 40 et 100ans inclus
+          vieux.push(age);    //on ajoute l'age au tableau des vieux        
+          age++;   //on incremente
+      }
+      else if ((age < 40) && (age >= 20)) { //age entre 20 inclus et 40 ans
+          moyen.push(age);    //on ajoute l'age au tableau des moyens                  
+          age++;   //on incremente
+      }
+      else if (age < 20) {  // age inferieur à 20 ans
+          jeune.push(age);  //on ajoute l'age au tableau des jeunes
+          age++;   //on incremente
+      }
+      else if ((age > 100) && (age != '')) {
+          break;
+      }
+      }
+      console.log('Voici l\'age des jeunes :'); 
+      for (var age in jeune) {
+          console.log(jeune[age] + 'ans');     //on affiche le tableau jeune
+      }
+      console.log('Voici l\'age des moyens :');
+      for (var age in moyen) {                
+          console.log(moyen[age] + 'ans ');   //on affiche le tableau moyens
+      }
+      console.log('Voici l\'age des vieux :');
+      for (var age in vieux) {
+          console.log(vieux[age] + 'ans ');   //on affiche le tableau vieux
+      }
+  </pre>
+              </div>
+          </div>
+
+          </div>
+      </div>
+  </div>
+  <!-- SCRIPT  -->
+  <script>
+      var jeune = []; //creer tableau des jeunes
+      var moyen = []; //creer tableau des moyens
+      var vieux = []; //creer tableau des vieux
+      while (true) {
+          var age = prompt('Veuillez indiquer l\'age de la personne : \n\n (S\'arrete au dela de 100 ans !');
+          if ((age <= 100) && (age > 40)) {  //si l'age est compris entre 40 et 100 ans inclus
+              vieux.push(age);               // alors on l'ajoute au tableau des vieux
+              age++;
+          }
+          else if ((age < 40) && (age >= 20)) { //si l'age est compris entre 20 à 40 ans (20 inclus)
+              moyen.push(age);                  // alors on l'ajoute au tableau des moyens
+              age++;
+          }
+          else if (age < 20) {  // si l'age est inferieur à 20 
+              jeune.push(age);  // alors on ajoute au tableau jeune
+              age++;
+          }
+          else if ((age > 100) && (age != '')) {
+              break;
+          }
+      }
+      console.log('Voici l\'age des jeunes :');  //affiche un message 
+      for (var age in jeune) {
+          console.log(jeune[age] + 'ans');        //affichera le contenu du tableau des jeunes et de leur age
+      }
+      console.log('Voici l\'age des moyens :');//affiche un message 
+      for (var age in moyen) {
+          console.log(moyen[age] + 'ans ');        //affichera le contenu du tableau des moyens et de leur age
+      }
+      console.log('Voici l\'age des vieux :');//affiche un message 
+      for (var age in vieux) {
+          console.log(vieux[age] + 'ans ');        //affichera le contenu du tableau des vieux et de leur age
+      }
+  </script>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color:#838383;">
+      © 2020 Copyright:
+      <a class="text-dark" href="index.html">Kadir Reziga</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
